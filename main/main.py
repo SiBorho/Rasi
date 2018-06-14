@@ -22,7 +22,7 @@ def getText(text):
 
 
 def output(text):
-    print(text)
+    print("Audio content: " + text)
 
 
 def main():
@@ -33,9 +33,9 @@ def main():
     #sr.recordCommands()
 
     """debug"""
-    rec.start()
+    #rec.start()
     #stt.debug_shoppinglist()
-    #stt.debug_delete_note()
+    stt.debug_delete_note()
     #stt.debug_get_note()
     #stt.debug_get_note_shopping_list()
 
