@@ -14,10 +14,21 @@ import simple_recognition as sr
 import decode_message as dm
 import recording as rec
 import speech_to_text as stt
+import requests
+
+url = 'http://127.0.0.1:8000/'
 
 def getText(text):
     print(text)
-    dm.splitt(text)
+    out = dm.splitt(text)
+    send(out)
+
+
+def send(out):
+    r = requests.post("127.0.0.1:8000/", data={'headline' : 'shopping list',
+    'content' : 'milk'})
+    print(r.status_code, r.reason)
+
 
 def main():
 

@@ -1,10 +1,13 @@
 #decode_message.py
 
 def splitt(message):
-
+    out = []
     if not message:
         print("leer ...")
     else:
+        command=''
+        headline=''
+        content=''
         # New Note - head - content
         com_new = message.find('new note')
 
@@ -34,3 +37,7 @@ def splitt(message):
         if cont != -1:
             content = message[cont + 8 : len(message)]
             print(content)
+    out.append(command)
+    out.append(headline)
+    out.append(content)
+    return out
