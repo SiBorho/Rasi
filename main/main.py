@@ -14,24 +14,18 @@ import simple_recognition as sr
 import decode_message as dm
 import recording as rec
 import speech_to_text as stt
-import requests
 
-url = 'http://127.0.0.1:8000/'
 
 def getText(text):
     print(text)
     out = dm.splitt(text)
-    send(out)
 
 
-def send(out):
-    r = requests.post("127.0.0.1:8000/", data={'headline' : 'shopping list',
-    'content' : 'milk'})
-    print(r.status_code, r.reason)
+def output(text):
+    print(text)
 
 
 def main():
-
     """Run TJ"""
     #sr.simple_recognition()
 
@@ -39,8 +33,11 @@ def main():
     #sr.recordCommands()
 
     """debug"""
-    #rec.start()
-    stt.debug()
+    rec.start()
+    #stt.debug_shoppinglist()
+    #stt.debug_delete_note()
+    #stt.debug_get_note()
+    #stt.debug_get_note_shopping_list()
 
 
 if __name__ == '__main__':

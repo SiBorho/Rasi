@@ -17,9 +17,22 @@ def sendIBM():
     audio = open('output.wav', 'rb')
     send(audio)
 
-def debug():
+def debug_shoppinglist():
     audio = open('shopping_list.wav', 'rb')
     send(audio)
+
+def debug_delete_note():
+    audio = open('delete_note_shopping_list.wav', 'rb')
+    send(audio)
+    
+def debug_get_note():
+    audio = open('get_note.wav', 'rb')
+    send(audio)
+
+def debug_get_note_shopping_list():
+    audio = open('get_note_shopping_list.wav', 'rb')
+    send(audio)
+
 
 def send(audio):
     # IBM bluemix API url
